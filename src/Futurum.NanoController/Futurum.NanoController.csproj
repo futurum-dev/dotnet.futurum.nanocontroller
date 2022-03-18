@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <IsPackable>true</IsPackable>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>Futurum.NanoController</PackageId>
+        <PackageIcon>dotnet-logo.png</PackageIcon>
+        <Description>A dotnet library that allows you to build WebApi controllers using a vertical slice architecture approach.</Description>
+        <PackageProjectUrl>https://www.futurum.dev/projects/dotnet-futurum.html</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/futurum-dev/dotnet.futurum.nanocontroller</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\assets\dotnet-logo.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Futurum.Core" Version="1.0.8" />
+        <PackageReference Include="Futurum.FluentValidation" Version="1.0.1" />
+        <PackageReference Include="Futurum.Microsoft.Extensions.DependencyInjection" Version="1.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+        <PackageReference Include="Scrutor" Version="3.3.0" />
+        <PackageReference Include="Serilog" Version="2.10.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" />
+    </ItemGroup>
+
+</Project>

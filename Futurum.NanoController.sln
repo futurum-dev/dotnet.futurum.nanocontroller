@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futurum.NanoController", "src\Futurum.NanoController\Futurum.NanoController.csproj", "{3BCFFA56-E9CD-480E-A9CD-83059DC85989}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{5516B2C0-1948-4361-8866-0F14EBDE2525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futurum.NanoController.Sample", "sample\Futurum.NanoController.Sample\Futurum.NanoController.Sample.csproj", "{6E3D443B-FE95-4882-BE63-0CB2831A8CBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CA6526AD-904A-439B-9215-B1219C07C908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futurum.NanoController.Tests", "test\Futurum.NanoController.Tests\Futurum.NanoController.Tests.csproj", "{9938AA26-6075-4432-B50D-0D1A2C4CC009}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{E517F2B3-3B3D-4F4F-A1E5-6C71735BB436}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = src\Directory.Build.props
+		ci.yml = .github\workflows\ci.yml
+		release.yml = .github\workflows\release.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{604DE462-0691-4FB5-AB8C-B35E5AECA340}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		LICENSE = LICENSE
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futurum.NanoController.EndToEndTests", "test\Futurum.NanoController.EndToEndTests\Futurum.NanoController.EndToEndTests.csproj", "{4C031EE0-3F29-4C29-94AC-7AA520E1E2DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmark", "benchmark", "{2A585AF9-69C3-40EA-A4BD-65CFE4FADFEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futurum.NanoController.Benchmark.Runner", "benchmark\Futurum.NanoController.Benchmark.Runner\Futurum.NanoController.Benchmark.Runner.csproj", "{325A8465-CA7E-4BC9-B7A0-E9EF268AA99A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futurum.NanoController.Benchmark.NanoController", "benchmark\Futurum.NanoController.Benchmark.NanoController\Futurum.NanoController.Benchmark.NanoController.csproj", "{60F4495F-C79A-476E-A4CB-B8826F63D34B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Futurum.NanoController.Benchmark.MvcController", "benchmark\Futurum.NanoController.Benchmark.MvcController\Futurum.NanoController.Benchmark.MvcController.csproj", "{0FD618C8-040E-4472-AB6E-8819A3448531}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BCFFA56-E9CD-480E-A9CD-83059DC85989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BCFFA56-E9CD-480E-A9CD-83059DC85989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BCFFA56-E9CD-480E-A9CD-83059DC85989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BCFFA56-E9CD-480E-A9CD-83059DC85989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E3D443B-FE95-4882-BE63-0CB2831A8CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E3D443B-FE95-4882-BE63-0CB2831A8CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3D443B-FE95-4882-BE63-0CB2831A8CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3D443B-FE95-4882-BE63-0CB2831A8CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9938AA26-6075-4432-B50D-0D1A2C4CC009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9938AA26-6075-4432-B50D-0D1A2C4CC009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9938AA26-6075-4432-B50D-0D1A2C4CC009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9938AA26-6075-4432-B50D-0D1A2C4CC009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C031EE0-3F29-4C29-94AC-7AA520E1E2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C031EE0-3F29-4C29-94AC-7AA520E1E2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C031EE0-3F29-4C29-94AC-7AA520E1E2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C031EE0-3F29-4C29-94AC-7AA520E1E2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325A8465-CA7E-4BC9-B7A0-E9EF268AA99A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325A8465-CA7E-4BC9-B7A0-E9EF268AA99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325A8465-CA7E-4BC9-B7A0-E9EF268AA99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325A8465-CA7E-4BC9-B7A0-E9EF268AA99A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F4495F-C79A-476E-A4CB-B8826F63D34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F4495F-C79A-476E-A4CB-B8826F63D34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F4495F-C79A-476E-A4CB-B8826F63D34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F4495F-C79A-476E-A4CB-B8826F63D34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD618C8-040E-4472-AB6E-8819A3448531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD618C8-040E-4472-AB6E-8819A3448531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD618C8-040E-4472-AB6E-8819A3448531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD618C8-040E-4472-AB6E-8819A3448531}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E3D443B-FE95-4882-BE63-0CB2831A8CBF} = {5516B2C0-1948-4361-8866-0F14EBDE2525}
+		{9938AA26-6075-4432-B50D-0D1A2C4CC009} = {CA6526AD-904A-439B-9215-B1219C07C908}
+		{4C031EE0-3F29-4C29-94AC-7AA520E1E2DD} = {CA6526AD-904A-439B-9215-B1219C07C908}
+		{325A8465-CA7E-4BC9-B7A0-E9EF268AA99A} = {2A585AF9-69C3-40EA-A4BD-65CFE4FADFEF}
+		{60F4495F-C79A-476E-A4CB-B8826F63D34B} = {2A585AF9-69C3-40EA-A4BD-65CFE4FADFEF}
+		{0FD618C8-040E-4472-AB6E-8819A3448531} = {2A585AF9-69C3-40EA-A4BD-65CFE4FADFEF}
+	EndGlobalSection
+EndGlobal

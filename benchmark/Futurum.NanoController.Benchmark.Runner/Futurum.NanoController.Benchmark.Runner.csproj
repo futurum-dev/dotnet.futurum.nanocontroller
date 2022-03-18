@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <NoWarn>1701;1702;RCS1090</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <NoWarn>1701;1702;RCS1090</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Futurum.NanoController.Benchmark.MvcController\Futurum.NanoController.Benchmark.MvcController.csproj" />
+      <ProjectReference Include="..\Futurum.NanoController.Benchmark.NanoController\Futurum.NanoController.Benchmark.NanoController.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Properties\launchSettings.json" />
+    </ItemGroup>
+
+</Project>
