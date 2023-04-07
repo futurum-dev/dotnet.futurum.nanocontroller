@@ -23,9 +23,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Futurum.Core" Version="1.0.8" />
-        <PackageReference Include="Futurum.FluentValidation" Version="1.0.1" />
-        <PackageReference Include="Futurum.Microsoft.Extensions.DependencyInjection" Version="1.0.2" />
+        <PackageReference Include="Futurum.Core" Version="1.0.15" />
+        <PackageReference Include="Futurum.FluentValidation" Version="1.0.3" />
+        <PackageReference Include="Futurum.Microsoft.Extensions.DependencyInjection" Version="1.0.4" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
         <PackageReference Include="Scrutor" Version="3.3.0" />
         <PackageReference Include="Serilog" Version="2.10.0" />

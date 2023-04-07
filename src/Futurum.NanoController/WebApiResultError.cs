@@ -32,6 +32,22 @@ public class WebApiResultError : IResultErrorComposite
 
     public HttpStatusCode HttpStatusCode { get; }
 
+    public string GetErrorStringSafe(string seperator)
+    {
+        string Transform(IResultError resultError) =>
+            resultError.ToErrorStringSafe(seperator);
+
+        string GetChildrenErrorString() =>
+            Children.Select(Transform)
+                    .StringJoin(seperator);
+
+        string GetParentErrorString(IResultErrorNonComposite parent) =>
+            parent.GetErrorStringSafe();
+
+        return Parent.Switch(parent => $"{GetParentErrorString(parent)}{seperator}{GetChildrenErrorString()}",
+                             GetChildrenErrorString);
+    }
+
     /// <inheritdoc />
     public string GetErrorString(string seperator)
     {
@@ -49,10 +65,10 @@ public class WebApiResultError : IResultErrorComposite
                              GetChildrenErrorString);
     }
 
-    public string GetChildrenErrorString(string seperator)
+    public string GetChildrenErrorStringSafe(string seperator)
     {
         string Transform(IResultError resultError) =>
-            resultError.ToErrorString(seperator);
+            resultError.ToErrorStringSafe(seperator);
 
         string GetChildrenErrorString() =>
             Children.Select(Transform)
@@ -65,4 +81,8 @@ public class WebApiResultError : IResultErrorComposite
     public ResultErrorStructure GetErrorStructure() =>
         Parent.Switch(parent => ResultErrorStructureExtensions.ToResultErrorStructure(parent.GetErrorString(), Children.Select(ResultErrorStructureExtensions.ToErrorStructure)),
                       () => ResultErrorStructureExtensions.ToResultErrorStructure(Children.Select(ResultErrorStructureExtensions.ToErrorStructure)));
+
+    public ResultErrorStructure GetErrorStructureSafe() =>
+        Parent.Switch(parent => ResultErrorStructureExtensions.ToResultErrorStructure(parent.GetErrorStringSafe(), Children.Select(ResultErrorStructureExtensions.ToErrorStructureSafe)),
+                      () => ResultErrorStructureExtensions.ToResultErrorStructure(Children.Select(ResultErrorStructureExtensions.ToErrorStructureSafe)));
 }

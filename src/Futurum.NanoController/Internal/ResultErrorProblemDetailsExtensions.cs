@@ -29,7 +29,7 @@ internal static class ResultErrorProblemDetailsExtensions
 
         return new ValidationProblemDetails(errors)
         {
-            Detail = fluentValidationResultError.ToErrorString(),
+            Detail = fluentValidationResultError.ToErrorStringSafe(),
             Instance = requestPath,
             Status = failedStatusCode,
         };
@@ -38,16 +38,16 @@ internal static class ResultErrorProblemDetailsExtensions
     private static ProblemDetails NanoControllerResultError(WebApiResultError webApiResultError, string requestPath) =>
         new()
         {
-            Detail = webApiResultError.GetChildrenErrorString(";"),
+            Detail = webApiResultError.GetChildrenErrorStringSafe(";"),
             Instance = requestPath,
             Status = (int)webApiResultError.HttpStatusCode,
-            Title = webApiResultError.Parent.Switch(parent => parent.ToErrorString(), () => "Unknown error")
+            Title = webApiResultError.Parent.Switch(parent => parent.ToErrorStringSafe(), () => "Unknown error")
         };
 
     private static ProblemDetails NotFoundResultError(ResultErrorKeyNotFound resultErrorKeyNotFound, string requestPath) =>
         new()
         {
-            Detail = resultErrorKeyNotFound.GetErrorString(),
+            Detail = resultErrorKeyNotFound.GetErrorStringSafe(),
             Instance = requestPath,
             Status = (int)HttpStatusCode.NotFound,
             Title = ReasonPhrases.GetReasonPhrase((int)HttpStatusCode.NotFound),
@@ -56,7 +56,7 @@ internal static class ResultErrorProblemDetailsExtensions
     private static ProblemDetails GeneralError(IResultError resultError, int failedStatusCode, string requestPath) =>
         new()
         {
-            Detail = resultError.ToErrorString(),
+            Detail = resultError.ToErrorStringSafe(),
             Instance = requestPath,
             Status = failedStatusCode,
             Title = ReasonPhrases.GetReasonPhrase(failedStatusCode),
