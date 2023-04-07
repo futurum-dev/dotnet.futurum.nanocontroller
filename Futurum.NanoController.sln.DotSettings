@@ -19,7 +19,13 @@
 	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/PLACE_EXPR_METHOD_ON_SINGLE_LINE/@EntryValue">NEVER</s:String>
 	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/PLACE_EXPR_PROPERTY_ON_SINGLE_LINE/@EntryValue">NEVER</s:String>
 	<s:Int64 x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_LIMIT/@EntryValue">200</s:Int64>
+	<s:Boolean x:Key="/Default/Environment/Filtering/ExcludeCoverageFilters/=Futurum_002ENanoController_002EBenchmark_002EMvcController_003B_002A_003B_002A_003B_002A/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/Filtering/ExcludeCoverageFilters/=Futurum_002ENanoController_002EBenchmark_002ENanoController_003B_002A_003B_002A_003B_002A/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/Filtering/ExcludeCoverageFilters/=Futurum_002ENanoController_002EBenchmark_002ERunner_003B_002A_003B_002A_003B_002A/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/Filtering/ExcludeCoverageFilters/=Futurum_002ENanoController_002EEndToEndTests_003B_002A_003B_002A_003B_002A/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/Filtering/ExcludeCoverageFilters/=Futurum_002ENanoController_002ETests_003B_002A_003B_002A_003B_002A/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ECSharpKeepExistingMigration/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ECSharpPlaceEmbeddedOnSameLineMigration/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ECSharpUseContinuousIndentInsideBracesMigration/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ESettingsUpgrade_002EMigrateBlankLinesAroundFieldToBlankLinesAroundProperty/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ESettingsUpgrade_002EMigrateBlankLinesAroundFieldToBlankLinesAroundProperty/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Futurum/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

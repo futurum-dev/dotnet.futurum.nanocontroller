@@ -24,6 +24,19 @@ public class WeÍbApiResultErrorTests
     }
     
     [Fact]
+    public void GetErrorStringSafe()
+    {
+        var httpStatusCode = HttpStatusCode.BadRequest;
+        var detailErrorMessage = Guid.NewGuid().ToString();
+
+        var nanoControllerResultError = new WebApiResultError(httpStatusCode, detailErrorMessage);
+
+        var errorString = nanoControllerResultError.GetErrorStringSafe(";");
+
+        errorString.Should().Be($"{ReasonPhrases.GetReasonPhrase((int)httpStatusCode)};{detailErrorMessage}");
+    }
+    
+    [Fact]
     public void GetErrorStructure()
     {
         var httpStatusCode = HttpStatusCode.BadRequest;
@@ -32,6 +45,21 @@ public class WeÍbApiResultErrorTests
         var nanoControllerResultError = new WebApiResultError(httpStatusCode, detailErrorMessage);
 
         var errorStructure = nanoControllerResultError.GetErrorStructure();
+
+        errorStructure.Message.Should().Be(ReasonPhrases.GetReasonPhrase((int)httpStatusCode));
+        errorStructure.Children.First().Message.Should().Be(detailErrorMessage);
+        errorStructure.Children.First().Children.Should().BeEmpty();
+    }
+    
+    [Fact]
+    public void GetErrorStructureSafe()
+    {
+        var httpStatusCode = HttpStatusCode.BadRequest;
+        var detailErrorMessage = Guid.NewGuid().ToString();
+
+        var nanoControllerResultError = new WebApiResultError(httpStatusCode, detailErrorMessage);
+
+        var errorStructure = nanoControllerResultError.GetErrorStructureSafe();
 
         errorStructure.Message.Should().Be(ReasonPhrases.GetReasonPhrase((int)httpStatusCode));
         errorStructure.Children.First().Message.Should().Be(detailErrorMessage);
